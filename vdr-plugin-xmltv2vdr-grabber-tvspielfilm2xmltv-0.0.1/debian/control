@@ -14,5 +14,5 @@ Depends: ${shlibs:Depends}, ${misc:Depends}
 Description: TV Spielfilm Grabber for the xmltv2vdr vdr plugin
  A Grabber for the xmltv2vdr vdr plugin that uses TV Spielfilm as data source.
  .
- Load epg data from the TV Spielfilm web service and output it to stdout in
- xmltv format.
+ Load epg data from the TV Spielfilm web service and output it to file in xmltv
+ format.

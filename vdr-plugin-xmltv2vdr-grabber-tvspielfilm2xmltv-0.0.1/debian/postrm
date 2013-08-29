@@ -1,9 +1,11 @@
 #!/bin/sh
-# postrm script for tvspielfilm2xmltv
+# postrm script for vdr-plugin-xmltv2vdr-grabber-tvspielfilm2xmltv
 #
 # see: dh_installdeb(1)
 
 set -e
+
+TVSPIELFILM2XMLTV_PICDIR="/var/lib/epgsources/tvspielfilm2xmltv-img"
 
 # summary of how this script can be called:
 #        * <postrm> `remove'
@@ -20,7 +22,11 @@ set -e
 
 
 case "$1" in
-    purge|remove|upgrade|failed-upgrade|abort-install|abort-upgrade|disappear)
+    purge|remove)
+        rm -f "${TVSPIELFILM2XMLTV_PICDIR}"/*
+    ;;
+
+    upgrade|failed-upgrade|abort-install|abort-upgrade|disappear)
     ;;
 
     *)
