@@ -1,0 +1,18 @@
+Source: vdr-plugin-xmltv2vdr-grabber-tvspielfilm2xmltv
+Section: misc
+Priority: extra
+Maintainer: no name <no@mail.tld>
+Build-Depends: debhelper (>= 8.0.0)
+Standards-Version: 3.9.3
+Homepage: https://github.com/chriszero/tvspielfilm2xmltv
+Vcs-Git: https://github.com/chriszero/tvspielfilm2xmltv.git
+Vcs-Browser: https://github.com/chriszero/tvspielfilm2xmltv
+
+Package: vdr-plugin-xmltv2vdr-grabber-tvspielfilm2xmltv
+Architecture: all
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Description: TV Spielfilm Grabber for the xmltv2vdr vdr plugin
+ A Grabber for the xmltv2vdr vdr plugin that uses TV Spielfilm as data source.
+ .
+ Load epg data from the TV Spielfilm web service and output it to stdout in
+ xmltv format.
