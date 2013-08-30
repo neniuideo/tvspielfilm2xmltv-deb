@@ -24,7 +24,7 @@ apt-get install git devscripts libwww-perl libcrypt-ssleay-perl
 2.  Go to the right directory
 
     ```bash
-    cd tvspielfilm2xmltv-deb/vdr-plugin-xmltv2vdr-grabber-tvspielfilm2xmltv-0.0.1
+    cd tvspielfilm2xmltv-deb/vdr-plugin-xmltv2vdr-grabber-tvspielfilm2xmltv-0.0.0
     ```
 
 3. Get the upstream source
@@ -43,7 +43,12 @@ apt-get install git devscripts libwww-perl libcrypt-ssleay-perl
         debian/rules update-git
         ```
 
-    Beware that all files in "vdr-plugin-xmltv2vdr-grabber-tvspielfilm2xmltv-0.0.1" will be deleted (except the debian directory).
+    You got an new source directory called "vdr-plugin-xmltv2vdr-grabber-tvspielfilm2xmltv-<new version>". Go to that directory
+
+    ```bash
+    cd ..
+    cd vdr-plugin-xmltv2vdr-grabber-tvspielfilm2xmltv-<new version>
+    ```
 
 4. Build the package
 
