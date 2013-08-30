@@ -43,7 +43,7 @@ apt-get install git devscripts libwww-perl libcrypt-ssleay-perl
         debian/rules update-git
         ```
 
-    You got an new source directory called "vdr-plugin-xmltv2vdr-grabber-tvspielfilm2xmltv-<new version>". Go to that directory
+    You got an new source directory called "vdr-plugin-xmltv2vdr-grabber-tvspielfilm2xmltv-&lt;new version&gt;". Go to that directory
 
     ```bash
     cd ..
