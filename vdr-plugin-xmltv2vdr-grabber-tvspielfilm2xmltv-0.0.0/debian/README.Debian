@@ -1,6 +1,13 @@
 vdr-plugin-xmltv2vdr-grabber-tvspielfilm2xmltv for Debian
 ---------------------------------------------------------
 
+How to build with latest upstream source...
+
+
+Get the package vdr-plugin-xmltv2vdr-grabber-tvspielfilm2xmltv source and
+extrakt the pakage source. Go to the source directory.
+
+
 Get the build depends:
 
  apt-get install git devscripts libwww-perl libcrypt-ssleay-perl libparse-debcontrol-perl libdistro-info-perl
@@ -29,7 +36,7 @@ Get the new upstream source:
 
    dpkg-buildpackage -tc
 
-  Now you get the debian pakage and the pakage source.
+  Now you get the (new) debian pakage and the pakage source.
 
 
 Put the binary and/or Source pakages into your repository or install the binary
