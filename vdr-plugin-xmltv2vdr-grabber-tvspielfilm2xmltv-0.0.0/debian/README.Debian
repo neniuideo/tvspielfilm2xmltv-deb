@@ -10,7 +10,7 @@ extrakt the pakage source. Go to the source directory.
 
 Get the build depends:
 
- apt-get install git devscripts libwww-perl libcrypt-ssleay-perl libparse-debcontrol-perl libdistro-info-perl
+ apt-get install git devscripts libwww-perl libcrypt-ssleay-perl libparse-debcontrol-perl libdistro-info-perl file debhelper
 
 
 Get the new upstream source:
