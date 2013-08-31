@@ -16,7 +16,7 @@ case $1 in
       exit 0
     fi
 
-    echo "Download Upstream Tarball"
+    echo "Download upstream tarball"
     uscan --rename
 
     echo "Create package directory..."
@@ -35,6 +35,38 @@ case $1 in
   ;;
 
   update-git)
+    echo "Checking Versions..."
+    tmp="$(mktemp -d)"
+    curdir="$(pwd)"
+    cd "${tmp}"
+    git clone https://github.com/neniuideo/tvspielfilm2xmltv.git
+    cd "${tmp}/tvspielfilm2xmltv"
+    upstream=$(git describe --tags --dirty | sed 's/^v//')
+    cd "${curdir}"
+    local=$(dpkg-parsechangelog | sed -ne 's/^Version: \(\([0-9]\+\):\)\?\(.*\)-.*/\3/p')
+    echo "Local Version: ${local}"
+    echo "Upstream Version: ${upstream}"
+
+    if [ "${local}" = "${upstream}" ]; then
+      echo "Up to date"
+      exit 0
+    fi
+
+    echo "Create upstream tarball"
+    git --git-dir="${tmp}/tvspielfilm2xmltv/.git" archive --format=tar HEAD | gzip -c9 > "../vdr-plugin-xmltv2vdr-grabber-tvspielfilm2xmltv_${upstream}.orig.tar.gz"
+
+    echo "Create package directory..."
+    mkdir -p "../vdr-plugin-xmltv2vdr-grabber-tvspielfilm2xmltv-${upstream}"
+    cp -R debian "../vdr-plugin-xmltv2vdr-grabber-tvspielfilm2xmltv-${upstream}"
+    tar -xf "../vdr-plugin-xmltv2vdr-grabber-tvspielfilm2xmltv_${upstream}.orig.tar.gz"\
+      -C "../vdr-plugin-xmltv2vdr-grabber-tvspielfilm2xmltv-${upstream}"
+    
+    echo "Append new version to changelog..."
+    dch --newversion="${upstream}-1"\
+      --controlmaint\
+      --distribution=unstable\
+      --changelog="../vdr-plugin-xmltv2vdr-grabber-tvspielfilm2xmltv-${upstream}/debian/changelog"\
+      "New upstream version."
     true
   ;;
 esac
