@@ -36,11 +36,11 @@ Get the new upstream source:
 
    dpkg-buildpackage -tc
 
-  Now you get the (new) debian pakage and the pakage source.
+  Now you get the (new) debian package and the package source.
 
 
-Put the binary and/or Source pakages into your repository or install the binary
-pakage with
+Put the binary and/or Source packages into your repository or install the binary
+package with
 
  apt-get install python3 python3-requests python3-tz
  dpkg -i vdr-plugin-xmltv2vdr-grabber-tvspielfilm2xmltv_<version>_all.deb
