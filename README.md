@@ -12,9 +12,11 @@ You need
 - libcrypt-ssleay-perl
 - libparse-debcontrol-perl
 - libdistro-info-perl
+- file
+- debhelper
 
 ```bash
-apt-get install git devscripts libwww-perl libcrypt-ssleay-perl libparse-debcontrol-perl libdistro-info-perl
+apt-get install git devscripts libwww-perl libcrypt-ssleay-perl libparse-debcontrol-perl libdistro-info-perl file debhelper
 ```
 
 1. Checkout
