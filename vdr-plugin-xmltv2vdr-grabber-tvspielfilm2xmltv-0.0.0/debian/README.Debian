@@ -1,17 +1,22 @@
 vdr-plugin-xmltv2vdr-grabber-tvspielfilm2xmltv for Debian
 ---------------------------------------------------------
 
+Get the build depends:
+
+ apt-get install git devscripts libwww-perl libcrypt-ssleay-perl libparse-debcontrol-perl libdistro-info-perl
+
+
 Get the new upstream source:
 
 - Do 1. or 2.
 
   1. Use the latest release
 
-   debian/rules update-release
+   debian/update-upstream.sh update-release
 
   2. Use the latest GIT revision
 
-   debian/rules update-git
+   debian/update-upstream.sh update-git 
 
   You got an new source directory called
   "vdr-plugin-xmltv2vdr-grabber-tvspielfilm2xmltv-<new version>".

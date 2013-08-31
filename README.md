@@ -10,9 +10,11 @@ You need
 - devscripts
 - libwww-perl
 - libcrypt-ssleay-perl
+- libparse-debcontrol-perl
+- libdistro-info-perl
 
 ```bash
-apt-get install git devscripts libwww-perl libcrypt-ssleay-perl
+apt-get install git devscripts libwww-perl libcrypt-ssleay-perl libparse-debcontrol-perl libdistro-info-perl
 ```
 
 1. Checkout
@@ -34,13 +36,13 @@ apt-get install git devscripts libwww-perl libcrypt-ssleay-perl
    1. Use the latest release
 
         ```bash
-        debian/rules update-release
+        debian/update-upstream.sh update-release
         ```
 
    2. Use the latest GIT revision
 
         ```bash
-        debian/rules update-git
+        debian/update-upstream.sh update-git
         ```
 
     You got an new source directory called "vdr-plugin-xmltv2vdr-grabber-tvspielfilm2xmltv-&lt;new version&gt;". Go to that directory
