@@ -1,7 +1,7 @@
 tvspielfilm2xmltv-deb
 =====================
 
-Debian Pakaging for [https://github.com/chriszero/tvspielfilm2xmltv](tvspielfilm2xmltv)
+Debian Pakaging for [tvspielfilm2xmltv](https://github.com/chriszero/tvspielfilm2xmltv)
 
 Build pakage set from GIT. If you are using the generated regular package see README.Debian how to update upstream.
 
