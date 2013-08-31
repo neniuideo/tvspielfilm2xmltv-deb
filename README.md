@@ -58,6 +58,7 @@ apt-get install git devscripts libwww-perl libcrypt-ssleay-perl libparse-debcont
 
     ```bash
     dpkg-buildpackage -tc
+    cd ..
     ```
 
     Now you get the debian pakage and the pakage source.
