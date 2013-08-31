@@ -62,8 +62,8 @@ apt-get install git devscripts libwww-perl libcrypt-ssleay-perl
 
 Put the binary and/or Source pakages into your repository or install the binary pakage with
 ```bash
-apt-get install <foo bar>
-dpkg -i <foo bar>
+apt-get install python3 python3-requests python3-tz
+dpkg -i vdr-plugin-xmltv2vdr-grabber-tvspielfilm2xmltv_<version>_all.deb
 ```
 
 have fun...

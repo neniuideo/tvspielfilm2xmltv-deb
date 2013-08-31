@@ -5,7 +5,7 @@
 
 set -e
 
-TVSPIELFILM2XMLTV_PICDIR="/var/lib/epgsources/tvspielfilm2xmltv-img"
+TVSPIELFILM2XMLTV_PICDIR="tvspielfilm2xmltv-img"
 
 # summary of how this script can be called:
 #        * <postinst> `configure' <most-recently-configured-version>
@@ -22,7 +22,8 @@ TVSPIELFILM2XMLTV_PICDIR="/var/lib/epgsources/tvspielfilm2xmltv-img"
 
 case "$1" in
     configure)
-        chmod -R o+w "${TVSPIELFILM2XMLTV_PICDIR}"
+        chmod ugo+rwx "/var/lib/epgsources"
+        chmod ugo+rwx "/var/lib/epgsources/${TVSPIELFILM2XMLTV_PICDIR}"
         tvspielfilm2xmltv --controlfile
         
     ;;

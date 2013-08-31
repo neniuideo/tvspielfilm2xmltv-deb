@@ -1,6 +1,38 @@
 vdr-plugin-xmltv2vdr-grabber-tvspielfilm2xmltv for Debian
 ---------------------------------------------------------
 
-<possible notes regarding this package - if none, delete this file>
+Get the new upstream source:
+
+- Do 1. or 2.
+
+  1. Use the latest release
+
+   debian/rules update-release
+
+  2. Use the latest GIT revision
+
+   debian/rules update-git
+
+  You got an new source directory called
+  "vdr-plugin-xmltv2vdr-grabber-tvspielfilm2xmltv-<new version>".
+  Go to that directory
+
+   cd ..
+   cd vdr-plugin-xmltv2vdr-grabber-tvspielfilm2xmltv-<new version>
+
+- Build the package
+
+   dpkg-buildpackage -tc
+
+  Now you get the debian pakage and the pakage source.
+
+
+Put the binary and/or Source pakages into your repository or install the binary
+pakage with
+
+ apt-get install python3 python3-requests python3-tz
+ dpkg -i vdr-plugin-xmltv2vdr-grabber-tvspielfilm2xmltv_<version>_all.deb
+
+have fun...
 
  -- no name <no@mail.tld>  Thu, 29 Aug 2013 20:28:45 +0000

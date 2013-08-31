@@ -1,2 +1,4 @@
 /var/lib/epgsources/tvspielfilm2xmltv-img
 /var/lib/epgsources/tvspielfilm2xmltv-img/*
+/usr/share/tvspielfilm2xmltv/tvsp2xmltv/__pycache__
+/usr/share/tvspielfilm2xmltv/tvsp2xmltv/__pycache__/*
