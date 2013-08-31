@@ -1,9 +1,9 @@
 tvspielfilm2xmltv-deb
 =====================
 
-Debian Pakaging for [tvspielfilm2xmltv](https://github.com/chriszero/tvspielfilm2xmltv)
+Debian Packaging for [tvspielfilm2xmltv](https://github.com/chriszero/tvspielfilm2xmltv)
 
-Build pakage set from GIT. If you are using the generated regular package see README.Debian how to update upstream.
+Build package set from GIT. If you are using the generated regular package see README.Debian how to update upstream.
 
 You need
 - git
@@ -61,11 +61,11 @@ apt-get install git devscripts libwww-perl libcrypt-ssleay-perl libparse-debcont
     cd ..
     ```
 
-    Now you get the debian pakage and the pakage source.
+    Now you get the debian package and the package source.
 
 
 
-Put the binary and/or Source pakages into your repository or install the binary pakage with
+Put the binary and/or Source packages into your repository or install the binary package with
 ```bash
 apt-get install python3 python3-requests python3-tz
 dpkg -i vdr-plugin-xmltv2vdr-grabber-tvspielfilm2xmltv_<version>_all.deb
