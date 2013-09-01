@@ -22,7 +22,7 @@ apt-get install git devscripts libwww-perl libcrypt-ssleay-perl libparse-debcont
 1. Checkout
 
     ```bash
-    git clone https://github.com/neniuideo/tvspielfilm2xmltv-deb.git
+    git clone https://github.com/chriszero/tvspielfilm2xmltv.git
     ```
 
 2.  Go to the right directory
