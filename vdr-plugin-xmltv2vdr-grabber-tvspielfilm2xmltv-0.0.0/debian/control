@@ -10,7 +10,7 @@ Vcs-Browser: https://github.com/chriszero/tvspielfilm2xmltv
 
 Package: vdr-plugin-xmltv2vdr-grabber-tvspielfilm2xmltv
 Architecture: all
-Depends: python2.7, python-requests, python-tz, ${misc:Depends}
+Depends: python (>= 2.7), python-requests, python-tz, ${misc:Depends}
 Description: TV Spielfilm Grabber for the xmltv2vdr vdr plugin
  A Grabber for the xmltv2vdr vdr plugin that uses TV Spielfilm as data source.
  .
