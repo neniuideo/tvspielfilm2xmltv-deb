@@ -39,7 +39,7 @@ case $1 in
     tmp="$(mktemp -d)"
     curdir="$(pwd)"
     cd "${tmp}"
-    git clone https://github.com/neniuideo/tvspielfilm2xmltv.git
+    git clone https://github.com/chriszero/tvspielfilm2xmltv.git
     cd "${tmp}/tvspielfilm2xmltv"
     upstream=$(git describe --tags --dirty | sed 's/^v//')
     cd "${curdir}"
