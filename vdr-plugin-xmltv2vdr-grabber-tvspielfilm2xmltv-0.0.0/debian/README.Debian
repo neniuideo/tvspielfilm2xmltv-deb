@@ -42,7 +42,7 @@ Get the new upstream source:
 Put the binary and/or Source packages into your repository or install the binary
 package with
 
- apt-get install python3 python3-requests python3-tz
+ apt-get install python python-requests python-tz
  dpkg -i vdr-plugin-xmltv2vdr-grabber-tvspielfilm2xmltv_<version>_all.deb
 
 have fun...
