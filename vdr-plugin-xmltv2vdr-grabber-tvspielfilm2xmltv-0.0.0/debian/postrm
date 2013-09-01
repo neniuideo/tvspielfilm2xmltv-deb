@@ -26,8 +26,9 @@ case "$1" in
         rm -f "/var/lib/epgsources/${TVSPIELFILM2XMLTV_PICDIR}"/*
         rm -f "/var/lib/epgsources/tvspielfilm2xmltv"
         rm -f "/var/lib/epgsources/tvspielfilm2xmltv.xmltv"
-        rm -f /usr/share/tvspielfilm2xmltv/__pycache__/*
-        [ -d /usr/share/tvspielfilm2xmltv/__pycache__ ] && rmdir --ignore-fail-on-non-empty /usr/share/tvspielfilm2xmltv/__pycache__
+        rm -f /usr/share/tvspielfilm2xmltv/tvsp2xmltv/__pycache__/*
+        [ -d /usr/share/tvspielfilm2xmltv/tvsp2xmltv/__pycache__ ] && rmdir --ignore-fail-on-non-empty /usr/share/tvspielfilm2xmltv/tvsp2xmltv/__pycache__
+        rm -f /usr/share/tvspielfilm2xmltv/tvsp2xmltv/*.pyc
     ;;
 
     upgrade|failed-upgrade|abort-install|abort-upgrade|disappear)
