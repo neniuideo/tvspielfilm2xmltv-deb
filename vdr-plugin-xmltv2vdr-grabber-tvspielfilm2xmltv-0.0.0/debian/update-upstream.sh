@@ -28,7 +28,7 @@ case $1 in
 
     echo "Append new version to changelog..."
     dch --newversion="${upstream}-1"\
-      --controlmaint\
+      --maintmaint\
       --distribution=unstable\
       --changelog="../vdr-plugin-xmltv2vdr-grabber-tvspielfilm2xmltv-${upstream}/debian/changelog"\
       "New upstream version."
