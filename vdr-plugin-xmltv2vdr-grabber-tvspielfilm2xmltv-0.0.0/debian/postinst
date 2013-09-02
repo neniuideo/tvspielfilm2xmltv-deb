@@ -25,6 +25,7 @@ case "$1" in
         chmod ugo+rwx "/var/lib/epgsources"
         chmod ugo+rwx "/var/lib/epgsources/${TVSPIELFILM2XMLTV_PICDIR}"
         tvspielfilm2xmltv --controlfile
+        printf "\nNow restart your VDR to notify xmltv2vdr about the changes.\n\n"
         
     ;;
 

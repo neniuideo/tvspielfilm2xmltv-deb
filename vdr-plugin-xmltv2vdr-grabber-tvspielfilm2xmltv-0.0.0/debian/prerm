@@ -5,6 +5,8 @@
 
 set -e
 
+TVSPIELFILM2XMLTV_PICDIR="tvspielfilm2xmltv-img"
+
 # summary of how this script can be called:
 #        * <prerm> `remove'
 #        * <old-prerm> `upgrade' <new-version>
@@ -18,11 +20,16 @@ set -e
 
 
 case "$1" in
-    remove|upgrade|deconfigure)
-        printf "\nNow restart your VDR to notify xmltv2vdr about the changes.\n\n"
+    remove)
+        rm -f "/var/lib/epgsources/${TVSPIELFILM2XMLTV_PICDIR}"/*
+        rm -f "/var/lib/epgsources/tvspielfilm2xmltv"
+        rm -f "/var/lib/epgsources/tvspielfilm2xmltv.xmltv"
+        rm -f /usr/share/tvspielfilm2xmltv/tvsp2xmltv/__pycache__/*
+        [ -d /usr/share/tvspielfilm2xmltv/tvsp2xmltv/__pycache__ ] && rmdir --ignore-fail-on-non-empty /usr/share/tvspielfilm2xmltv/tvsp2xmltv/__pycache__
+        rm -f /usr/share/tvspielfilm2xmltv/tvsp2xmltv/*.pyc
     ;;
 
-    failed-upgrade)
+    upgrade|deconfigure|failed-upgrade)
     ;;
 
     *)
